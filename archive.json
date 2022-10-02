@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-09-29T02:46:43.759448+00:00",
+  "timestamp": "2022-10-02T02:52:23.569100+00:00",
   "repo": "dimmyvi/tigress-requirements",
   "labels": [
     {
@@ -569,24 +569,26 @@
       "id": "PR_kwDOH6qLrM4_uktg",
       "title": "Update draft-tigress-requirements.md",
       "url": "https://github.com/dimmyvi/tigress-requirements/pull/6",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "dimmyvi",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Update based on Manuel's review",
       "createdAt": "2022-09-27T21:10:07Z",
-      "updatedAt": "2022-09-28T18:40:58Z",
+      "updatedAt": "2022-09-30T22:52:51Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
       "baseRefOid": "6501f3f23c6885af39d5bfbdee89cd2bb7603557",
       "headRepository": "dimmyvi/tigress-requirements",
       "headRefName": "manuel-review-patch-1",
-      "headRefOid": "9bb62a1baa9e8e9481fe1c396be3f31d9508abf5",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "3dea371a87bd07287d5415e3383b6dc7278f1379",
+      "closedAt": "2022-09-30T22:52:51Z",
+      "mergedAt": "2022-09-30T22:52:51Z",
+      "mergedBy": "dimmyvi",
+      "mergeCommit": {
+        "oid": "28dd8bf02dc0969e4dc8e732e8ed8f17960d0028"
+      },
       "comments": [
         {
           "author": "ManuelGersterB",
@@ -634,6 +636,46 @@
               "body": "Done.",
               "createdAt": "2022-09-28T18:35:28Z",
               "updatedAt": "2022-09-28T18:35:29Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5DIUOq",
+          "commit": {
+            "abbreviatedOid": "9bb62a1"
+          },
+          "author": "ManuelGersterB",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-09-30T05:11:08Z",
+          "updatedAt": "2022-09-30T05:11:08Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "@dimmyvi: Thx for adding me :) Just one request: Could you please change the organization to \"Mercedes-Benz AG\"?",
+              "createdAt": "2022-09-30T05:11:08Z",
+              "updatedAt": "2022-09-30T05:11:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5DMWqD",
+          "commit": {
+            "abbreviatedOid": "9bb62a1"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-09-30T20:06:43Z",
+          "updatedAt": "2022-09-30T20:06:43Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Of course! Did the change in the org name",
+              "createdAt": "2022-09-30T20:06:43Z",
+              "updatedAt": "2022-09-30T20:06:43Z"
             }
           ]
         }
