@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-16T02:53:38.678067+00:00",
+  "timestamp": "2022-10-18T02:49:00.204141+00:00",
   "repo": "dimmyvi/tigress-requirements",
   "labels": [
     {
@@ -62,9 +62,17 @@
       "labels": [],
       "body": "> This data SHOULD never be visible to said user in whichever messaging application the sender chose to initiate the transfer on. This eliminates the possibility of merely sending the requisite data inline, through an SMS or email for example, rather than leveraging an Intermediary server.\r\n\r\nWhy should the user not be able to see the data if they want to?",
       "createdAt": "2022-10-14T17:48:24Z",
-      "updatedAt": "2022-10-14T17:48:24Z",
+      "updatedAt": "2022-10-17T20:51:03Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "here we tried to say that the provisioning data itself won't be sent over whatever email/messaging app uses choses. This data will be temporary stored on Relay server and the link to the content stored there will be sent over SMS/email etc. Did not realize it was unclear from this sentence...",
+          "createdAt": "2022-10-17T20:50:25Z",
+          "updatedAt": "2022-10-17T20:51:03Z"
+        }
+      ]
     },
     {
       "number": 8,
@@ -78,9 +86,17 @@
       "labels": [],
       "body": "> (Req-P2P) A credential transfer SHALL be strictly from one device to another (group sharing is not a goal).\r\nThere is a difference between group sharing not being a goal and it being a goal to not allow group sharing. As I read this line it says the latter thing first and the former thing second. Which is intended?",
       "createdAt": "2022-10-14T17:50:55Z",
-      "updatedAt": "2022-10-14T17:50:55Z",
+      "updatedAt": "2022-10-17T20:48:08Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "eh, it's the former, we wanted to limit the scope to just peer-to-peer sharing (even though this may be a base for B2P in the future). Agree, this needs to be adjusted for clarity",
+          "createdAt": "2022-10-17T20:48:07Z",
+          "updatedAt": "2022-10-17T20:48:07Z"
+        }
+      ]
     },
     {
       "number": 9,
@@ -94,9 +110,24 @@
       "labels": [],
       "body": "> (Req-Security) Solution SHOULD provide security of the provisioning data transferred (MITM, brute-force attacks on the content, DDOS attacks etc).\r\n\r\nIt is unclear to me what this requirement is trying to say. What are the threats we're trying to protect against?",
       "createdAt": "2022-10-14T17:53:15Z",
-      "updatedAt": "2022-10-14T17:53:15Z",
+      "updatedAt": "2022-10-17T20:46:01Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "Protect content in transit on relay server - confidentiality (encrypt content stored on relay), integrity (impersonation attacks by storing malicious content - protect by device attestation at the time of creation) and availability - introduce measures against denial of service - protect the webapp on the network level. ",
+          "createdAt": "2022-10-17T20:44:44Z",
+          "updatedAt": "2022-10-17T20:44:44Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "This may came a bit vague, if you could suggest a better wording, it would be very much appreciated!",
+          "createdAt": "2022-10-17T20:46:01Z",
+          "updatedAt": "2022-10-17T20:46:01Z"
+        }
+      ]
     }
   ],
   "pulls": [
