@@ -211,8 +211,8 @@ Table of Contents
       degrees of security.
 
    *  (Req-P2P) A goal of credential transfer covered in this document
-      SHALL include a transfer from one device to another only (group
-      sharing SHALL not be a goal).
+      SHALL include a transfer from one device to another (group sharing
+      SHALL not be a goal).
 
    *  (Req-Privacy) If Intermediary server is required - it SHALL not be
       able to correlate users between exchanges, or create a social
