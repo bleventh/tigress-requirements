@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-18T02:49:00.204141+00:00",
+  "timestamp": "2022-10-20T02:45:08.986652+00:00",
   "repo": "dimmyvi/tigress-requirements",
   "labels": [
     {
@@ -760,6 +760,40 @@
           ]
         }
       ]
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOH6qLrM5BI33f",
+      "title": "Update draft-tigress-requirements.md",
+      "url": "https://github.com/dimmyvi/tigress-requirements/pull/10",
+      "state": "OPEN",
+      "author": "dimmyvi",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Addressing comments from Brad's review",
+      "createdAt": "2022-10-19T20:26:46Z",
+      "updatedAt": "2022-10-19T20:29:42Z",
+      "baseRepository": "dimmyvi/tigress-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "28dd8bf02dc0969e4dc8e732e8ed8f17960d0028",
+      "headRepository": "dimmyvi/tigress-requirements",
+      "headRefName": "brads_review",
+      "headRefOid": "01510a1071113370d0ff7d373c1c1b2f599c1e86",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "castiz",
+          "authorAssociation": "COLLABORATOR",
+          "body": "+1",
+          "createdAt": "2022-10-19T20:29:41Z",
+          "updatedAt": "2022-10-19T20:29:41Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
