@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-20T02:45:08.986652+00:00",
+  "timestamp": "2022-10-23T02:43:01.977399+00:00",
   "repo": "dimmyvi/tigress-requirements",
   "labels": [
     {
@@ -126,6 +126,51 @@
           "body": "This may came a bit vague, if you could suggest a better wording, it would be very much appreciated!",
           "createdAt": "2022-10-17T20:46:01Z",
           "updatedAt": "2022-10-17T20:46:01Z"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOH6qLrM5Uc3Ip",
+      "title": "Suggestion: focus on sharing via link rather than via a messaging app",
+      "url": "https://github.com/dimmyvi/tigress-requirements/issues/11",
+      "state": "OPEN",
+      "author": "bslassey",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "When discussing with @nicksha we made the observation that the _real_ goal that folks have in mind is the ability to share credentials with link (which can then be sent via a messaging application). By framing this as specifying the ability to send a key via a messaging application, we invite a lot of questions around why we're using a helper server and a link rather than the messaging services ability to transmit arbitrary blobs of data. ",
+      "createdAt": "2022-10-20T15:38:15Z",
+      "updatedAt": "2022-10-20T23:50:10Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "That's a very precise observation. \r\nI think the main idea behind separation of the share link and credential data is two-fold - \r\n1) We wanted to be able to use variety of regular comms  channels  to pass the link between sender and receiver devices - for simpler user experience\r\n2) Wanted to separate sensitive data - encrypted provisioning info (temporarily stored on intermediate server) and secret that can be passed along with shareURL that allows to decrypt the data. Plus we wanted to avoid additional preliminary secure channel establishment between sender and receiver devices that would be required in case of pure messaging protocols (e.g. Signal or WhatsApp)",
+          "createdAt": "2022-10-20T17:07:17Z",
+          "updatedAt": "2022-10-20T17:07:17Z"
+        },
+        {
+          "author": "nicksha",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think @bslassey's suggestion here is to frame our goal as the ability to share credentials via link rather than sharing credentials over any messaging application.  \r\n\r\nWith sharing via link, it clarify the mental model of how this credential sharing works, and it's implicit that any messaging channel can be used. This may help persuade those caught up in wanting to send data blobs over messaging services as to the simplicity of sharing via a link.\r\n\r\n",
+          "createdAt": "2022-10-20T21:05:46Z",
+          "updatedAt": "2022-10-20T21:05:46Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "Got it, thanks Nick. I will try to frame this idea into text in the draft",
+          "createdAt": "2022-10-20T23:38:19Z",
+          "updatedAt": "2022-10-20T23:38:19Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "Updated https://github.com/dimmyvi/tigress-requirements/pull/10 with this.",
+          "createdAt": "2022-10-20T23:50:10Z",
+          "updatedAt": "2022-10-20T23:50:10Z"
         }
       ]
     }
@@ -773,13 +818,13 @@
       "labels": [],
       "body": "Addressing comments from Brad's review",
       "createdAt": "2022-10-19T20:26:46Z",
-      "updatedAt": "2022-10-19T20:29:42Z",
+      "updatedAt": "2022-10-21T04:21:50Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
       "baseRefOid": "28dd8bf02dc0969e4dc8e732e8ed8f17960d0028",
       "headRepository": "dimmyvi/tigress-requirements",
       "headRefName": "brads_review",
-      "headRefOid": "01510a1071113370d0ff7d373c1c1b2f599c1e86",
+      "headRefOid": "51ce7137c22520f03fb1758f0ca1ba340491e4a7",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -791,9 +836,43 @@
           "body": "+1",
           "createdAt": "2022-10-19T20:29:41Z",
           "updatedAt": "2022-10-19T20:29:41Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "> Thanks. As I'm reading this now, the requirement is to support transferring a credential to a single device but that doesn't preclude it from supporting sharing with a group.\r\n\r\nThanks Brad, we wanted to leave an option to extend the solution in the future for B2P / P2B applications. Hence the \"open ending\". But for the time being, to present this proposal to community, we believe it needs to be simple - hence, P2P application is in scope now.   Hope this makes sense",
+          "createdAt": "2022-10-20T16:53:04Z",
+          "updatedAt": "2022-10-20T16:54:53Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOH6qLrM5Eg-8X",
+          "commit": {
+            "abbreviatedOid": "01510a1"
+          },
+          "author": "bslassey",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Thanks. As I'm reading this now, the requirement is to support transferring a credential to a single device but that doesn't preclude it from supporting sharing with a group. ",
+          "createdAt": "2022-10-20T15:31:36Z",
+          "updatedAt": "2022-10-20T15:31:36Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5EkFGt",
+          "commit": {
+            "abbreviatedOid": "51ce713"
+          },
+          "author": "ManuelGersterB",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-21T04:21:50Z",
+          "updatedAt": "2022-10-21T04:21:50Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
