@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-23T02:43:01.977399+00:00",
+  "timestamp": "2022-10-25T02:49:29.329196+00:00",
   "repo": "dimmyvi/tigress-requirements",
   "labels": [
     {
@@ -79,15 +79,15 @@
       "id": "I_kwDOH6qLrM5UBdbq",
       "title": "Is disallowing group sharing a goal?",
       "url": "https://github.com/dimmyvi/tigress-requirements/issues/8",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bslassey",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "> (Req-P2P) A credential transfer SHALL be strictly from one device to another (group sharing is not a goal).\r\nThere is a difference between group sharing not being a goal and it being a goal to not allow group sharing. As I read this line it says the latter thing first and the former thing second. Which is intended?",
       "createdAt": "2022-10-14T17:50:55Z",
-      "updatedAt": "2022-10-17T20:48:08Z",
-      "closedAt": null,
+      "updatedAt": "2022-10-24T16:30:54Z",
+      "closedAt": "2022-10-24T16:30:53Z",
       "comments": [
         {
           "author": "dimmyvi",
@@ -95,6 +95,13 @@
           "body": "eh, it's the former, we wanted to limit the scope to just peer-to-peer sharing (even though this may be a base for B2P in the future). Agree, this needs to be adjusted for clarity",
           "createdAt": "2022-10-17T20:48:07Z",
           "updatedAt": "2022-10-17T20:48:07Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "Hope that https://github.com/dimmyvi/tigress-requirements/pull/10 has addressed this issue",
+          "createdAt": "2022-10-24T16:30:53Z",
+          "updatedAt": "2022-10-24T16:30:53Z"
         }
       ]
     },
