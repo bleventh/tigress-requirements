@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-25T02:49:29.329196+00:00",
+  "timestamp": "2022-10-27T02:22:41.117082+00:00",
   "repo": "dimmyvi/tigress-requirements",
   "labels": [
     {
@@ -62,7 +62,7 @@
       "labels": [],
       "body": "> This data SHOULD never be visible to said user in whichever messaging application the sender chose to initiate the transfer on. This eliminates the possibility of merely sending the requisite data inline, through an SMS or email for example, rather than leveraging an Intermediary server.\r\n\r\nWhy should the user not be able to see the data if they want to?",
       "createdAt": "2022-10-14T17:48:24Z",
-      "updatedAt": "2022-10-17T20:51:03Z",
+      "updatedAt": "2022-10-26T17:11:42Z",
       "closedAt": null,
       "comments": [
         {
@@ -71,6 +71,13 @@
           "body": "here we tried to say that the provisioning data itself won't be sent over whatever email/messaging app uses choses. This data will be temporary stored on Relay server and the link to the content stored there will be sent over SMS/email etc. Did not realize it was unclear from this sentence...",
           "createdAt": "2022-10-17T20:50:25Z",
           "updatedAt": "2022-10-17T20:51:03Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "ack",
+          "createdAt": "2022-10-26T17:11:42Z",
+          "updatedAt": "2022-10-26T17:11:42Z"
         }
       ]
     },
@@ -148,7 +155,7 @@
       "labels": [],
       "body": "When discussing with @nicksha we made the observation that the _real_ goal that folks have in mind is the ability to share credentials with link (which can then be sent via a messaging application). By framing this as specifying the ability to send a key via a messaging application, we invite a lot of questions around why we're using a helper server and a link rather than the messaging services ability to transmit arbitrary blobs of data. ",
       "createdAt": "2022-10-20T15:38:15Z",
-      "updatedAt": "2022-10-20T23:50:10Z",
+      "updatedAt": "2022-10-26T20:28:14Z",
       "closedAt": null,
       "comments": [
         {
@@ -178,6 +185,55 @@
           "body": "Updated https://github.com/dimmyvi/tigress-requirements/pull/10 with this.",
           "createdAt": "2022-10-20T23:50:10Z",
           "updatedAt": "2022-10-20T23:50:10Z"
+        },
+        {
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@bslassey I think sharing a url is our goal with our existing draft in mind, but I think that requirement is a bit specific for these general requirements. There could be a valid solution that is file extension based (i.e. a new `.invite` mime type) instead of url based. I agree that a url based solution is best, but I think we should describe why a url based solution is needed with abstract requirements.",
+          "createdAt": "2022-10-25T20:35:37Z",
+          "updatedAt": "2022-10-25T20:35:37Z"
+        },
+        {
+          "author": "bslassey",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> @bslassey I think sharing a url is our goal with our existing draft in mind, but I think that requirement is a bit specific for these general requirements. There could be a valid solution that is file extension based (i.e. a new `.invite` mime type) instead of url based. I agree that a url based solution is best, but I think we should describe why a url based solution is needed with abstract requirements.\r\n\r\nI agree that sending binary data is an entirely plausible solution that has some nice benefits. However, I read these requirements as having selected the url-based approach and elevating some side benefits of that approach to requirements to necessitate that being the only viable solution. For example:\r\n\r\n```\r\n(Req-SmoothUX) Solution SHALL allow for user experience where neither Sender nor Receiver is presented with\r\nraw data required only by the secure transfer protocol. The data SHOULD only be parsed programmatically and\r\nnot required to be presented to the end user. This data SHOULD never be visible to said user in whichever\r\nmessaging application the sender chose to initiate the transfer on. This eliminates the possibility of\r\nmerely sending the requisite data inline, through an SMS or email for example, rather than leveraging an\r\nintermediary server.\r\n```\r\n\r\nThis requirement seems to rule out anything besides a url-based solution. If this is the direction we want to go, then we should be clear about the intentions. If we are open to other solutions then we should scope these requirements to things that really are required and perhaps have a separate discussion of nice-to-haves.",
+          "createdAt": "2022-10-25T21:15:55Z",
+          "updatedAt": "2022-10-25T21:18:58Z"
+        },
+        {
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I agree that the \"(Req-SmoothUX)\" requirement, and others, probably rule out anything other than a url-based solution. But  I don't think that because other requirements force this design it is in its own right a requirement. Similarly, \"(Req-Connectivity)\" probably necessitates an intermediary server, but that doesn't mean we should have a requirement for an intermediary server.\r\n\r\nOr, do you think we should include \"derived requirements\" maybe in a new sub section?",
+          "createdAt": "2022-10-25T23:24:38Z",
+          "updatedAt": "2022-10-25T23:24:38Z"
+        },
+        {
+          "author": "bslassey",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think \"we should be able to have a smooth UX\" is an entirely unobjectionable notion, but as it pertains to requirements its very subjective and can't be defined in such a way that offers an indisputable yes or no answer. As such, I think it is more of a consideration or evaluation criteria we may want to document and not a requirement.\r\n\r\nGetting beyond the initial notion of `Solution SHALL allow for user experience `  you can see that the additional details in the requirement have nothing to do with the protocol. For example, I could write a messaging app that fetches the raw data from the URL and presents that to the user. Conversely if we sent the data in binary form I could (and would presumably) present UX to the user about accepting a key and never show them the raw data. IMO these are entirely decisions for messaging apps to make that have very little to do with the underlying protocol and thus don't belong in this document. \r\n\r\nAll that said, this is probably a discussion better had in issue #7. My suggestion here is that if the authors are actually very committed to the URL approach, we should say that rather than work backwards from that and right the requirements to fit it. ",
+          "createdAt": "2022-10-26T14:55:37Z",
+          "updatedAt": "2022-10-26T14:55:37Z"
+        },
+        {
+          "author": "tfpauly",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I agree that the UX requirement is very hard to understand as a real requirement, and should not be in the formal list. It can be a guiding principle mentioned in text, but isn't about the actual protocol.",
+          "createdAt": "2022-10-26T15:54:22Z",
+          "updatedAt": "2022-10-26T15:54:22Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "I think that the intend is to present TIGRESS not as just a protocol, but rather \"a combination of communication protocol, defined roles and relations between actors, recommendations to implementors, security rules and guidelines.\" If we define it so, then UI and UX become valid requirements, don't you think so?\r\n",
+          "createdAt": "2022-10-26T17:14:14Z",
+          "updatedAt": "2022-10-26T17:15:28Z"
+        },
+        {
+          "author": "tfpauly",
+          "authorAssociation": "COLLABORATOR",
+          "body": "No, I don't think that the UX (or the cross-platform, since _every_ standard protocol must be cross-platform) aspects are protocol requirements. The point of this requirements list is to help people figure out what the right shape of the protocol is. Having a good UX is up to apps or OSes to deal with. Saying that an app or OS needs to recognize this as a particular content/message type so it can choose the right thing to display would be a better requirement.",
+          "createdAt": "2022-10-26T20:28:14Z",
+          "updatedAt": "2022-10-26T20:28:14Z"
         }
       ]
     }
@@ -825,7 +881,7 @@
       "labels": [],
       "body": "Addressing comments from Brad's review",
       "createdAt": "2022-10-19T20:26:46Z",
-      "updatedAt": "2022-10-21T04:21:50Z",
+      "updatedAt": "2022-10-25T20:35:56Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
       "baseRefOid": "28dd8bf02dc0969e4dc8e732e8ed8f17960d0028",
@@ -878,6 +934,26 @@
           "createdAt": "2022-10-21T04:21:50Z",
           "updatedAt": "2022-10-21T04:21:50Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5E3vpc",
+          "commit": {
+            "abbreviatedOid": "51ce713"
+          },
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-10-25T20:35:56Z",
+          "updatedAt": "2022-10-25T20:35:56Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "I followed up in https://github.com/dimmyvi/tigress-requirements/issues/11 about this. I don't think we should add it.",
+              "createdAt": "2022-10-25T20:35:56Z",
+              "updatedAt": "2022-10-25T20:35:56Z"
+            }
+          ]
         }
       ]
     }
