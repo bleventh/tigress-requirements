@@ -5,7 +5,7 @@
 TIGRESS                                                     D. Vinokurov
 Internet-Draft                                                  C. Astiz
 Intended status: Informational                              A. Pelletier
-Expires: 3 April 2023                                       J. L. Giraud
+Expires: 1 May 2023                                         J. L. Giraud
                                                              A. Bulgakov
                                                              M. Byington
                                                                Apple Inc
@@ -13,7 +13,7 @@ Expires: 3 April 2023                                       J. L. Giraud
                                                             Alphabet Inc
                                                               M. Gerster
                                                         Mercedes-Benz AG
-                                                       30 September 2022
+                                                         28 October 2022
 
 
           Transfer Digital Credentials Securely - Requirements
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 April 2023.
+   This Internet-Draft will expire on 1 May 2023.
 
 Copyright Notice
 
@@ -206,12 +206,18 @@ Table of Contents
       online at different times.  Sender and Receiver SHALL never need
       to be online at the same time.
 
-   *  (Req-init) Solution SHOULD allow Sender to initiate credential
-      transfer to Receiver over any messaging channel, with various
+   *  (Req-UrlLink) Solution SHALL allow to share credentials as a
+      UrlLink to provisioning information stored on intermediary server.
+      The link SHALL easily be shared between Sender and Receiver device
+      over various communication channels.
+
+   *  (Req-init) Solution SHOULD allow Sender to send the UrlLink (Req-
+      UrlLink) to Receiver over any messaging channel, with various
       degrees of security.
 
-   *  (Req-P2P) A credential transfer SHALL be strictly from one device
-      to another (group sharing is not a goal).
+   *  (Req-P2P) A goal of credential transfer covered in this document
+      SHALL include transfer from one device to another (group sharing
+      SHALL not be a goal).
 
    *  (Req-Privacy) If Intermediary server is required - it SHALL not be
       able to correlate users between exchanges, or create a social
@@ -231,7 +237,7 @@ Table of Contents
    *  (Req-IntermediaryProvision) If Intermediary server is required -
       it MUST not be able to provision credential on their own.
 
-   *  (Req-Opaque) If Intermediary server is required - Message content
+   *  (Req-Opaque) If Intermediary server is required - message content
       between Sender and Receiver MUST be opaque to the Intermediary.
 
    *  (Req-ArbitraryFormat) The solution SHALL support arbitrary message

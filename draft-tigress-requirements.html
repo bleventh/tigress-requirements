@@ -16,11 +16,11 @@
 <meta content="
        This document describes the use cases necessitating the secure transfer of digital credentials between two devices and defines general assumptions, requirements and the scope of the corresponding Tigress Internet-draft  . 
     " name="description">
-<meta content="xml2rfc 3.14.2" name="generator">
+<meta content="xml2rfc 3.15.1" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-tigress-requirements-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.14.2
+  xml2rfc 3.15.1
     Python 3.10.5
     appdirs 1.4.4
     ConfigArgParse 1.5.3
@@ -379,7 +379,7 @@ dl {
 dl > dt {
   float: left;
   margin-right: 1em;
-  min-width: 20ch;
+  min-width: 12ch;
 }
 dl.dlNewline > dt {
   float: none;
@@ -1037,16 +1037,16 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 </style>
 
 </head>
-<body>
+<body class="xml2rfc">
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">tigress-requirements</td>
-<td class="right">September 2022</td>
+<td class="right">October 2022</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Vinokurov, et al.</td>
-<td class="center">Expires 3 April 2023</td>
+<td class="center">Expires 1 May 2023</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1059,12 +1059,12 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-tigress-requirements-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-09-30" class="published">30 September 2022</time>
+<time datetime="2022-10-28" class="published">28 October 2022</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-04-03">3 April 2023</time></dd>
+<dd class="expires"><time datetime="2023-05-01">1 May 2023</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1105,7 +1105,7 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 <h1 id="title">Transfer Digital Credentials Securely - Requirements</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document describes the use cases necessitating the secure transfer of digital credentials between two devices and defines general assumptions, requirements and the scope of the corresponding Tigress Internet-draft <span>[<a href="#Tigress-00" class="xref">Tigress-00</a>]</span>.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document describes the use cases necessitating the secure transfer of digital credentials between two devices and defines general assumptions, requirements and the scope of the corresponding Tigress Internet-draft <span>[<a href="#Tigress-00" class="cite xref">Tigress-00</a>]</span>.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1137,7 +1137,7 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 3 April 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 1 May 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1167,51 +1167,51 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
         </h2>
 <nav class="toc"><ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
-            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="xref">1</a>.  <a href="#name-introduction" class="xref">Introduction</a></p>
+            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="xref">2</a>.  <a href="#name-conventions-and-definitions" class="xref">Conventions and Definitions</a></p>
+            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="xref">3</a>.  <a href="#name-use-cases" class="xref">Use Cases</a></p>
+            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-use-cases" class="internal xref">Use Cases</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="xref">4</a>.  <a href="#name-assumptions" class="xref">Assumptions</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-assumptions" class="internal xref">Assumptions</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="xref">5</a>.  <a href="#name-requirements" class="xref">Requirements</a></p>
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-requirements" class="internal xref">Requirements</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#section-6" class="xref">6</a>.  <a href="#name-review-of-existing-solution" class="xref">Review of existing solutions</a></p>
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-review-of-existing-solution" class="internal xref">Review of existing solutions</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
-                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="xref">6.1</a>.  <a href="#name-arbitrary-messaging-channel" class="xref">Arbitrary Messaging Channel (Email / WhatsApp / SMS / Signal / etc.)</a></p>
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-arbitrary-messaging-channel" class="internal xref">Arbitrary Messaging Channel (Email / WhatsApp / SMS / Signal / etc.)</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
-                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="xref">6.2</a>.  <a href="#name-gss-api-kerberos" class="xref">GSS-API, Kerberos</a></p>
+                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-gss-api-kerberos" class="internal xref">GSS-API, Kerberos</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.3">
-                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="xref">6.3</a>.  <a href="#name-signal-protocol" class="xref">Signal Protocol</a></p>
+                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-signal-protocol" class="internal xref">Signal Protocol</a></p>
 </li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#section-7" class="xref">7</a>.  <a href="#name-out-of-scope" class="xref">Out of Scope</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-out-of-scope" class="internal xref">Out of Scope</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#section-8" class="xref">8</a>.  <a href="#name-security-considerations" class="xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
-            <p id="section-toc.1-1.9.1"><a href="#section-9" class="xref">9</a>.  <a href="#name-iana-considerations" class="xref">IANA Considerations</a></p>
+            <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#section-10" class="xref">10</a>. <a href="#name-normative-references" class="xref">Normative References</a></p>
+            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-normative-references" class="internal xref">Normative References</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="xref"></a><a href="#name-acknowledgments" class="xref">Acknowledgments</a></p>
+            <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
-            <p id="section-toc.1-1.12.1"><a href="#appendix-B" class="xref"></a><a href="#name-authors-addresses" class="xref">Authors' Addresses</a></p>
+            <p id="section-toc.1-1.12.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1232,7 +1232,7 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
       </h2>
 <p id="section-2-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
 "<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
-described in BCP 14 <span>[<a href="#RFC2119" class="xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="xref">RFC8174</a>]</span> when, and only when, they
+described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
 appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">General terms:<a href="#section-2-2" class="pilcrow">¶</a></p>
 <ul class="normal">
@@ -1259,7 +1259,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-use-cases" class="section-name selfRef">Use Cases</a>
       </h2>
 <ul class="normal">
-<li class="normal" id="section-3-1.1">Let's say Ben owns a vehicle that supports digital keys which comply with the CCC <span>[<a href="#CCC-Digital-Key-30" class="xref">CCC-Digital-Key-30</a>]</span> open standard. Ben would like to let Ryan borrow the car for the weekend. Ryan and Ben are using two different mobile phones with different operating systems. In order for Ben to share his car key to Ryan for a weekend, he must transfer some data to the receiver device. The data structure shared between the two participants is defined in the CCC. In addition, the CCC requires the receiver to generate required key material and return it to the sender to sign and return back to the receiver. At this point, the receiver now has a token that will allow them to provision their new key with the car.<a href="#section-3-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-3-1.1">Let's say Ben owns a vehicle that supports digital keys which comply with the CCC <span>[<a href="#CCC-Digital-Key-30" class="cite xref">CCC-Digital-Key-30</a>]</span> open standard. Ben would like to let Ryan borrow the car for the weekend. Ryan and Ben are using two different mobile phones with different operating systems. In order for Ben to share his car key to Ryan for a weekend, he must transfer some data to the receiver device. The data structure shared between the two participants is defined in the CCC. In addition, the CCC requires the receiver to generate required key material and return it to the sender to sign and return back to the receiver. At this point, the receiver now has a token that will allow them to provision their new key with the car.<a href="#section-3-1.1" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-3-1.2">Bob booked a room at a hotel for the weekend, but will be arriving late at night. Alice, his partner, comes to the hotel first, so Bob wants to share his key to the room with Alice. Bob and Alice are using two different mobile phones with different operating systems. In order for Bob to share his key to the hotel to Alice for a weekend, he must transfer some data to her device. The data structure shared between the two participants is proprietary to the given hotel chain (or Provisioning Partner). This data transfer is a one-time, unidirectional from Bob's device to Alice's. Once Alice receives this data, she can provision a new key to her device, making a call to Provisioning Partner to receive new credential information.<a href="#section-3-1.2" class="pilcrow">¶</a>
 </li>
@@ -1282,7 +1282,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </li>
         <li class="normal" id="section-4-1.5">Sender and Receiver <span class="bcp14">SHALL</span> both be able to manage the shared credential at any point by communicating with the Provisioning Partner. Credential lifecycle management is out of scope for this proposal.<a href="#section-4-1.5" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-4-1.6">Any device OEM with a digital credential implementation adherent to Tigress <span>[<a href="#Tigress-00" class="xref">Tigress-00</a>]</span> <span class="bcp14">SHALL</span> be able to receive shared provisioning information, whether or not they can originate provisioning information themselves or host their own intermediary.<a href="#section-4-1.6" class="pilcrow">¶</a>
+        <li class="normal" id="section-4-1.6">Any device OEM with a digital credential implementation adherent to Tigress <span>[<a href="#Tigress-00" class="cite xref">Tigress-00</a>]</span> <span class="bcp14">SHALL</span> be able to receive shared provisioning information, whether or not they can originate provisioning information themselves or host their own intermediary.<a href="#section-4-1.6" class="pilcrow">¶</a>
 </li>
       </ul>
 </section>
@@ -1301,37 +1301,39 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </li>
         <li class="normal" id="section-5-1.4">(Req-Connectivity) Sender and Receiver <span class="bcp14">SHALL</span> be allowed to be online at different times. Sender and Receiver <span class="bcp14">SHALL</span> never need to be online at the same time.<a href="#section-5-1.4" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.5">(Req-init) Solution <span class="bcp14">SHOULD</span> allow Sender to initiate credential transfer to Receiver over any messaging channel, with various degrees of security.<a href="#section-5-1.5" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.5">(Req-UrlLink) Solution <span class="bcp14">SHALL</span> allow to share credentials as a UrlLink to provisioning information stored on intermediary server. The link <span class="bcp14">SHALL</span> easily be shared between Sender and Receiver device over various communication channels.<a href="#section-5-1.5" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.6">(Req-P2P) A credential transfer <span class="bcp14">SHALL</span> be strictly from one device to another (group sharing is not a goal).<a href="#section-5-1.6" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.6">(Req-init) Solution <span class="bcp14">SHOULD</span> allow Sender to send the UrlLink (Req-UrlLink) to Receiver over any messaging channel, with various degrees of security.<a href="#section-5-1.6" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.7">(Req-Privacy) If Intermediary server is required - it <span class="bcp14">SHALL</span> not be able to correlate users between exchanges, or create a social graph. Intermediary server shall not be an arbiter of Identity.<a href="#section-5-1.7" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.7">(Req-P2P) A goal of credential transfer covered in this document <span class="bcp14">SHALL</span> include transfer from one device to another (group sharing <span class="bcp14">SHALL</span> not be a goal).<a href="#section-5-1.7" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.8">(Req-Security) Solution <span class="bcp14">SHOULD</span> provide security of the provisioning data transferred (MITM, brute-force attacks on the content, DDOS attacks etc).<a href="#section-5-1.8" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.8">(Req-Privacy) If Intermediary server is required - it <span class="bcp14">SHALL</span> not be able to correlate users between exchanges, or create a social graph. Intermediary server shall not be an arbiter of Identity.<a href="#section-5-1.8" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.9">(Req-Notify) Solution <span class="bcp14">SHOULD</span> support a notification mechanism to inform devices on the content update on Intermediary server.<a href="#section-5-1.9" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.9">(Req-Security) Solution <span class="bcp14">SHOULD</span> provide security of the provisioning data transferred (MITM, brute-force attacks on the content, DDOS attacks etc).<a href="#section-5-1.9" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.10">(Req-Revoke) Solution <span class="bcp14">SHALL</span> maintain access control, allowing Sender to revoke before the share has been accepted, and for Receiver to end transfer at any time.<a href="#section-5-1.10" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.10">(Req-Notify) Solution <span class="bcp14">SHOULD</span> support a notification mechanism to inform devices on the content update on Intermediary server.<a href="#section-5-1.10" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.11">(Req-IntermediaryProvision) If Intermediary server is required - it <span class="bcp14">MUST</span> not be able to provision credential on their own.<a href="#section-5-1.11" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.11">(Req-Revoke) Solution <span class="bcp14">SHALL</span> maintain access control, allowing Sender to revoke before the share has been accepted, and for Receiver to end transfer at any time.<a href="#section-5-1.11" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.12">(Req-Opaque) If Intermediary server is required - Message content between Sender and Receiver <span class="bcp14">MUST</span> be opaque to the Intermediary.<a href="#section-5-1.12" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.12">(Req-IntermediaryProvision) If Intermediary server is required - it <span class="bcp14">MUST</span> not be able to provision credential on their own.<a href="#section-5-1.12" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.13">(Req-ArbitraryFormat) The solution <span class="bcp14">SHALL</span> support arbitrary message formats to support both keys that implement public standards like CCC as well as proprietary implementations of digital keys.<a href="#section-5-1.13" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.13">(Req-Opaque) If Intermediary server is required - message content between Sender and Receiver <span class="bcp14">MUST</span> be opaque to the Intermediary.<a href="#section-5-1.13" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.14">(Req-UnderstoodFormat) Both Sender application and Receiver application <span class="bcp14">MUST</span> be able to recognize the format.<a href="#section-5-1.14" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.14">(Req-ArbitraryFormat) The solution <span class="bcp14">SHALL</span> support arbitrary message formats to support both keys that implement public standards like CCC as well as proprietary implementations of digital keys.<a href="#section-5-1.14" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.15">(Req-Simplicity) Where possible, the system <span class="bcp14">SHOULD</span> rely on simple building blocks to facilitate adoption and implementation.<a href="#section-5-1.15" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.15">(Req-UnderstoodFormat) Both Sender application and Receiver application <span class="bcp14">MUST</span> be able to recognize the format.<a href="#section-5-1.15" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.16">(Req-IntermediaryAttestation) If any Intermediary is required - it <span class="bcp14">SHALL</span> implement mechanisms to prevent abuse by share initiating device, verifying that the device is in good standing and content generated by the sender device can be trusted by the Intermediary. The trust mechanism could be proprietary or publicly verifiable ( e.g. WebAuthN).<a href="#section-5-1.16" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.16">(Req-Simplicity) Where possible, the system <span class="bcp14">SHOULD</span> rely on simple building blocks to facilitate adoption and implementation.<a href="#section-5-1.16" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.17">(Req-RoundTrips) Solution <span class="bcp14">SHALL</span> allow for multiple round trips or multiple reads/writes between one set of Sender and Receiver devices.<a href="#section-5-1.17" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.17">(Req-IntermediaryAttestation) If any Intermediary is required - it <span class="bcp14">SHALL</span> implement mechanisms to prevent abuse by share initiating device, verifying that the device is in good standing and content generated by the sender device can be trusted by the Intermediary. The trust mechanism could be proprietary or publicly verifiable ( e.g. WebAuthN).<a href="#section-5-1.17" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.18">(Req-ReceiverTrust) If any Intermediary is required - the Receiver device <span class="bcp14">SHOULD</span> evaluate the trustworthiness of the Intermediary using a list of trusted/approved intermediaries.<a href="#section-5-1.18" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.18">(Req-RoundTrips) Solution <span class="bcp14">SHALL</span> allow for multiple round trips or multiple reads/writes between one set of Sender and Receiver devices.<a href="#section-5-1.18" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.19">(Req-Preview) Solution <span class="bcp14">SHOULD</span> allow for extensibility and discoverable extensions (preview of share invitation).<a href="#section-5-1.19" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.19">(Req-ReceiverTrust) If any Intermediary is required - the Receiver device <span class="bcp14">SHOULD</span> evaluate the trustworthiness of the Intermediary using a list of trusted/approved intermediaries.<a href="#section-5-1.19" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.20">(Req-RedemptionHandling) Shared Provisioning Information <span class="bcp14">SHOULD</span> route Receiver to redeem Provisioning Information using the designated Credential Management Application (e.g. Wallet).<a href="#section-5-1.20" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.20">(Req-Preview) Solution <span class="bcp14">SHOULD</span> allow for extensibility and discoverable extensions (preview of share invitation).<a href="#section-5-1.20" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-5-1.21">(Req-RedemptionHandling) Shared Provisioning Information <span class="bcp14">SHOULD</span> route Receiver to redeem Provisioning Information using the designated Credential Management Application (e.g. Wallet).<a href="#section-5-1.21" class="pilcrow">¶</a>
 </li>
       </ul>
 </section>
@@ -1341,7 +1343,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-review-of-existing-solution">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-review-of-existing-solution" class="section-name selfRef">Review of existing solutions</a>
       </h2>
-<p id="section-6-1">A number of existing solutions / protocols have been reviewed in order to be used for secure credential transfer based on the requirements: GSS-API, Kerberos, AWS S3, email, Signal. None of the existing protocols comply with the requirements; the effort of modifying the existing protocols has been accessed to be significantly higher than introducing a new solution to solve this problem. The goal of the Tigress draft <span>[<a href="#Tigress-00" class="xref">Tigress-00</a>]</span> is not to define a new encryption or secure message exchange protocol, but rather a standardized mechanism of exchanging access-specific encrypted credential information.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-1">A number of existing solutions / protocols have been reviewed in order to be used for secure credential transfer based on the requirements: GSS-API, Kerberos, AWS S3, email, Signal. None of the existing protocols comply with the requirements; the effort of modifying the existing protocols has been accessed to be significantly higher than introducing a new solution to solve this problem. The goal of the Tigress draft <span>[<a href="#Tigress-00" class="cite xref">Tigress-00</a>]</span> is not to define a new encryption or secure message exchange protocol, but rather a standardized mechanism of exchanging access-specific encrypted credential information.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <div id="arbitrary-messaging-channel-email-whatsapp-sms-signal-etc">
 <section id="section-6.1">
         <h3 id="name-arbitrary-messaging-channel">
@@ -1356,7 +1358,7 @@ If multiple round trips were required the user would need to manually managing m
         <h3 id="name-gss-api-kerberos">
 <a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-gss-api-kerberos" class="section-name selfRef">GSS-API, Kerberos</a>
         </h3>
-<p id="section-6.2-1">GSS-API <span>[<a href="#RFC2078" class="xref">RFC2078</a>]</span> and Kerberos <span>[<a href="#RFC4120" class="xref">RFC4120</a>]</span> are authentication technologies which could be used to authenticate Sender, Receiver and intermediary. However, as they provide strong authentication, they would allow the Intermediary server to build a social graph in violation of (Req-Privacy). Their setup also require strong coordination between the actors of the system which seems overly costly for the intended system.
+<p id="section-6.2-1">GSS-API <span>[<a href="#RFC2078" class="cite xref">RFC2078</a>]</span> and Kerberos <span>[<a href="#RFC4120" class="cite xref">RFC4120</a>]</span> are authentication technologies which could be used to authenticate Sender, Receiver and intermediary. However, as they provide strong authentication, they would allow the Intermediary server to build a social graph in violation of (Req-Privacy). Their setup also require strong coordination between the actors of the system which seems overly costly for the intended system.
 AWS S3 could be used as an Intermediary server but it would force all participants to use a specific cloud service which is in violation of (Req-AnyPlatorm).<a href="#section-6.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
