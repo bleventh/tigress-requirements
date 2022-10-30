@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-27T02:22:41.117082+00:00",
+  "timestamp": "2022-10-30T02:38:16.695040+00:00",
   "repo": "dimmyvi/tigress-requirements",
   "labels": [
     {
@@ -155,7 +155,7 @@
       "labels": [],
       "body": "When discussing with @nicksha we made the observation that the _real_ goal that folks have in mind is the ability to share credentials with link (which can then be sent via a messaging application). By framing this as specifying the ability to send a key via a messaging application, we invite a lot of questions around why we're using a helper server and a link rather than the messaging services ability to transmit arbitrary blobs of data. ",
       "createdAt": "2022-10-20T15:38:15Z",
-      "updatedAt": "2022-10-26T20:28:14Z",
+      "updatedAt": "2022-10-27T21:22:33Z",
       "closedAt": null,
       "comments": [
         {
@@ -234,6 +234,27 @@
           "body": "No, I don't think that the UX (or the cross-platform, since _every_ standard protocol must be cross-platform) aspects are protocol requirements. The point of this requirements list is to help people figure out what the right shape of the protocol is. Having a good UX is up to apps or OSes to deal with. Saying that an app or OS needs to recognize this as a particular content/message type so it can choose the right thing to display would be a better requirement.",
           "createdAt": "2022-10-26T20:28:14Z",
           "updatedAt": "2022-10-26T20:28:14Z"
+        },
+        {
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> I think \"we should be able to have a smooth UX\" is an entirely unobjectionable notion, but as it pertains to requirements its very subjective and can't be defined in such a way that offers an indisputable yes or no answer.\r\n\r\nI agree with this. We can work on rewriting the wording so that it isn't objective. Or we could just remove it.\r\n\r\n---\r\n\r\nCan we have a requirement as prescriptive as to say that the solution must use a URL for the invitations? I thought we would need to come up with requirements that described the capabilities that we want, and a URL invite would then meet those required capabilities.",
+          "createdAt": "2022-10-27T19:10:11Z",
+          "updatedAt": "2022-10-27T19:10:11Z"
+        },
+        {
+          "author": "bslassey",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Can we have a requirement as prescriptive as to say that the solution must use a URL for the invitations? I thought we would need to come up with requirements that described the capabilities that we want, and a URL invite would then meet those required capabilities.\r\n\r\nI would very much encourage you not to try to write the requirements such that they preclude all other solutions other than a URL-based solution. If your end goal is to have a URL-based solution, then just go ahead and say that and let's have that debate. And that was why I originally filed this issue, to tease out if the authors were trying to preclude all non-URL based solution in these requirements.\r\n\r\nMy prefered approach would be to narrow the requirements down to just the requirements and leave the solution space as open as possible. \r\n\r\n",
+          "createdAt": "2022-10-27T20:01:49Z",
+          "updatedAt": "2022-10-27T20:01:49Z"
+        },
+        {
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> I would very much encourage you not to try to write the requirements such that they preclude all other solutions other than a URL-based solution. If your end goal is to have a URL-based solution, then just go ahead and say that and let's have that debate. And that was why I originally filed this issue, to tease out if the authors were trying to preclude all non-URL based solution in these requirements.\r\n\r\nI think it is important that the authors, me included, are open to other solutions and changes to the draft we originally submitted. I feel like that is the whole point of the working group. We believe that a url invite is the best option, but if there is something else better that we haven't considered that would be worth considering. I worry that if we start defining requirements like \"url invite\" we will accidentally preclude good ideas that we hadn't thought of.\r\n\r\n> My prefered approach would be to narrow the requirements down to just the requirements and leave the solution space as open as possible.\r\n\r\nI think we are saying the same thing, but we've done this in a confusing way with some of our requirements.\r\n\r\nI think we should delete the smooth UX requirement and rely on this existing requirement:\r\n> (Req-RedemptionHandling) Shared Provisioning Information SHOULD route Receiver to redeem Provisioning Information using the designated Credential Management Application (e.g. Wallet).\r\n\r\nWhat we really want is an invitation type that is routable to a specific application or service (i.e. when a user taps a link in a chat app another app or website is opened). Which we can do with a url or a new mime type.",
+          "createdAt": "2022-10-27T21:22:33Z",
+          "updatedAt": "2022-10-27T21:22:33Z"
         }
       ]
     }
@@ -874,24 +895,26 @@
       "id": "PR_kwDOH6qLrM5BI33f",
       "title": "Update draft-tigress-requirements.md",
       "url": "https://github.com/dimmyvi/tigress-requirements/pull/10",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "dimmyvi",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Addressing comments from Brad's review",
       "createdAt": "2022-10-19T20:26:46Z",
-      "updatedAt": "2022-10-25T20:35:56Z",
+      "updatedAt": "2022-10-28T17:16:14Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
       "baseRefOid": "28dd8bf02dc0969e4dc8e732e8ed8f17960d0028",
       "headRepository": "dimmyvi/tigress-requirements",
       "headRefName": "brads_review",
       "headRefOid": "51ce7137c22520f03fb1758f0ca1ba340491e4a7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2022-10-28T17:16:14Z",
+      "mergedAt": "2022-10-28T17:16:14Z",
+      "mergedBy": "dimmyvi",
+      "mergeCommit": {
+        "oid": "a3df61ce04a55cd3f40b1ec4548b1bf7eed8c0df"
+      },
       "comments": [
         {
           "author": "castiz",
@@ -952,6 +975,185 @@
               "body": "I followed up in https://github.com/dimmyvi/tigress-requirements/issues/11 about this. I don't think we should add it.",
               "createdAt": "2022-10-25T20:35:56Z",
               "updatedAt": "2022-10-25T20:35:56Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOH6qLrM5Bw6Ga",
+      "title": "Remove Req-AnyPlatform",
+      "url": "https://github.com/dimmyvi/tigress-requirements/pull/12",
+      "state": "OPEN",
+      "author": "bslassey",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Being cross-platform is taken for a given for an IETF protocol\r\n",
+      "createdAt": "2022-10-28T16:57:34Z",
+      "updatedAt": "2022-10-28T18:42:43Z",
+      "baseRepository": "dimmyvi/tigress-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "28dd8bf02dc0969e4dc8e732e8ed8f17960d0028",
+      "headRepository": "bslassey/tigress-requirements",
+      "headRefName": "main",
+      "headRefOid": "6234669d4526ef78b58b8c8802ea9054f9974b08",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOH6qLrM5FKn1k",
+          "commit": {
+            "abbreviatedOid": "6234669"
+          },
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-28T17:38:07Z",
+          "updatedAt": "2022-10-28T17:38:07Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FKrPs",
+          "commit": {
+            "abbreviatedOid": "6234669"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-28T17:51:11Z",
+          "updatedAt": "2022-10-28T17:51:11Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FK41H",
+          "commit": {
+            "abbreviatedOid": "6234669"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-28T18:42:43Z",
+          "updatedAt": "2022-10-28T18:42:43Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDOH6qLrM5Bw6ps",
+      "title": "Remove UX requirements",
+      "url": "https://github.com/dimmyvi/tigress-requirements/pull/13",
+      "state": "OPEN",
+      "author": "bslassey",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "We shouldn't be specifying UX in an protocol doc",
+      "createdAt": "2022-10-28T17:00:20Z",
+      "updatedAt": "2022-10-28T21:59:10Z",
+      "baseRepository": "dimmyvi/tigress-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "28dd8bf02dc0969e4dc8e732e8ed8f17960d0028",
+      "headRepository": "dimmyvi/tigress-requirements",
+      "headRefName": "bslassey-remove-ux",
+      "headRefOid": "bf1b47a541238b12d959d0e46fe327897eb8f548",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOH6qLrM5FKrF1",
+          "commit": {
+            "abbreviatedOid": "bf1b47a"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-28T17:50:34Z",
+          "updatedAt": "2022-10-28T17:50:34Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FKvAD",
+          "commit": {
+            "abbreviatedOid": "bf1b47a"
+          },
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-10-28T18:05:45Z",
+          "updatedAt": "2022-10-28T18:05:45Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I think this requirement is important because it precludes sending a raw data blob that needs to be copy and pasted to be redeemed. Without this requirement there is not as big of a need for a new protocol because people could send key sign requests over an already secure messaging channel.\r\n\r\nI have a feeling this type of requirement is common the IETF ART area. Is there a common way to phase this that would be acceptable? \"The protocol should be usable\"",
+              "createdAt": "2022-10-28T18:05:45Z",
+              "updatedAt": "2022-10-28T18:05:45Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FKxGc",
+          "commit": {
+            "abbreviatedOid": "bf1b47a"
+          },
+          "author": "bslassey",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-10-28T18:14:05Z",
+          "updatedAt": "2022-10-28T18:14:06Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "are there any examples of these types of requirements in the ART area that we can use as a pattern?",
+              "createdAt": "2022-10-28T18:14:06Z",
+              "updatedAt": "2022-10-28T18:14:06Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FK22Y",
+          "commit": {
+            "abbreviatedOid": "bf1b47a"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-28T18:34:38Z",
+          "updatedAt": "2022-10-28T18:34:38Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FMCPa",
+          "commit": {
+            "abbreviatedOid": "bf1b47a"
+          },
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-10-28T21:58:59Z",
+          "updatedAt": "2022-10-28T21:58:59Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I did not find an example, if you have not seem similar requirements in the past then I am ok to remove both UX requirements.",
+              "createdAt": "2022-10-28T21:58:59Z",
+              "updatedAt": "2022-10-28T21:59:10Z"
             }
           ]
         }
