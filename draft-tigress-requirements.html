@@ -1295,37 +1295,35 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <ul class="normal">
 <li class="normal" id="section-5-1.1">(Req-Connectivity) Sender and Receiver <span class="bcp14">SHALL</span> be allowed to be online at different times. Sender and Receiver <span class="bcp14">SHALL</span> never need to be online at the same time.<a href="#section-5-1.1" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.2">(Req-UrlLink) Solution <span class="bcp14">SHALL</span> allow to share credentials as a UrlLink to provisioning information stored on intermediary server. The link <span class="bcp14">SHALL</span> easily be shared between Sender and Receiver device over various communication channels.<a href="#section-5-1.2" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.2">(Req-init) Solution <span class="bcp14">SHOULD</span> allow Sender to send the share invitation to Receiver over any messaging channel, with various degrees of security.<a href="#section-5-1.2" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.3">(Req-init) Solution <span class="bcp14">SHOULD</span> allow Sender to send the UrlLink (Req-UrlLink) to Receiver over any messaging channel, with various degrees of security.<a href="#section-5-1.3" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.3">(Req-P2P) A goal of credential transfer covered in this document <span class="bcp14">SHALL</span> include transfer from one device to another (group sharing <span class="bcp14">SHALL</span> not be a goal).<a href="#section-5-1.3" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.4">(Req-P2P) A goal of credential transfer covered in this document <span class="bcp14">SHALL</span> include transfer from one device to another (group sharing <span class="bcp14">SHALL</span> not be a goal).<a href="#section-5-1.4" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.4">(Req-Privacy) If Intermediary server is required - it <span class="bcp14">SHALL</span> not be able to correlate users between exchanges, or create a social graph. Intermediary server shall not be an arbiter of Identity.<a href="#section-5-1.4" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.5">(Req-Privacy) If Intermediary server is required - it <span class="bcp14">SHALL</span> not be able to correlate users between exchanges, or create a social graph. Intermediary server shall not be an arbiter of Identity.<a href="#section-5-1.5" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.5">(Req-Security) Solution <span class="bcp14">SHOULD</span> provide security of the provisioning data transferred (MITM, brute-force attacks on the content, DDOS attacks etc).<a href="#section-5-1.5" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.6">(Req-Security) Solution <span class="bcp14">SHOULD</span> provide security of the provisioning data transferred (MITM, brute-force attacks on the content, DDOS attacks etc).<a href="#section-5-1.6" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.6">(Req-Notify) Solution <span class="bcp14">SHOULD</span> support a notification mechanism to inform devices on the content update on Intermediary server.<a href="#section-5-1.6" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.7">(Req-Notify) Solution <span class="bcp14">SHOULD</span> support a notification mechanism to inform devices on the content update on Intermediary server.<a href="#section-5-1.7" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.7">(Req-Revoke) Solution <span class="bcp14">SHALL</span> maintain access control, allowing Sender to revoke before the share has been accepted, and for Receiver to end transfer at any time.<a href="#section-5-1.7" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.8">(Req-Revoke) Solution <span class="bcp14">SHALL</span> maintain access control, allowing Sender to revoke before the share has been accepted, and for Receiver to end transfer at any time.<a href="#section-5-1.8" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.8">(Req-IntermediaryProvision) If Intermediary server is required - it <span class="bcp14">MUST</span> not be able to provision credential on their own.<a href="#section-5-1.8" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.9">(Req-IntermediaryProvision) If Intermediary server is required - it <span class="bcp14">MUST</span> not be able to provision credential on their own.<a href="#section-5-1.9" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.9">(Req-Opaque) If Intermediary server is required - message content between Sender and Receiver <span class="bcp14">MUST</span> be opaque to the Intermediary.<a href="#section-5-1.9" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.10">(Req-Opaque) If Intermediary server is required - message content between Sender and Receiver <span class="bcp14">MUST</span> be opaque to the Intermediary.<a href="#section-5-1.10" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.10">(Req-ArbitraryFormat) The solution <span class="bcp14">SHALL</span> support arbitrary message formats to support both keys that implement public standards like CCC as well as proprietary implementations of digital keys.<a href="#section-5-1.10" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.11">(Req-ArbitraryFormat) The solution <span class="bcp14">SHALL</span> support arbitrary message formats to support both keys that implement public standards like CCC as well as proprietary implementations of digital keys.<a href="#section-5-1.11" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.11">(Req-UnderstoodFormat) Both Sender application and Receiver application <span class="bcp14">MUST</span> be able to recognize the format.<a href="#section-5-1.11" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.12">(Req-UnderstoodFormat) Both Sender application and Receiver application <span class="bcp14">MUST</span> be able to recognize the format.<a href="#section-5-1.12" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.12">(Req-IntermediaryAttestation) If any Intermediary is required - it <span class="bcp14">SHALL</span> implement mechanisms to prevent abuse by share initiating device, verifying that the device is in good standing and content generated by the sender device can be trusted by the Intermediary. The trust mechanism could be proprietary or publicly verifiable ( e.g. WebAuthN).<a href="#section-5-1.12" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.13">(Req-IntermediaryAttestation) If any Intermediary is required - it <span class="bcp14">SHALL</span> implement mechanisms to prevent abuse by share initiating device, verifying that the device is in good standing and content generated by the sender device can be trusted by the Intermediary. The trust mechanism could be proprietary or publicly verifiable ( e.g. WebAuthN).<a href="#section-5-1.13" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.13">(Req-RoundTrips) Solution <span class="bcp14">SHALL</span> allow for multiple round trips or multiple reads/writes between one set of Sender and Receiver devices.<a href="#section-5-1.13" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.14">(Req-RoundTrips) Solution <span class="bcp14">SHALL</span> allow for multiple round trips or multiple reads/writes between one set of Sender and Receiver devices.<a href="#section-5-1.14" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.14">(Req-ReceiverTrust) If any Intermediary is required - the Receiver device <span class="bcp14">SHOULD</span> evaluate the trustworthiness of the Intermediary using a list of trusted/approved intermediaries.<a href="#section-5-1.14" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.15">(Req-ReceiverTrust) If any Intermediary is required - the Receiver device <span class="bcp14">SHOULD</span> evaluate the trustworthiness of the Intermediary using a list of trusted/approved intermediaries.<a href="#section-5-1.15" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.15">(Req-Preview) Solution <span class="bcp14">SHOULD</span> allow for extensibility and discoverable extensions (preview of share invitation).<a href="#section-5-1.15" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-5-1.16">(Req-Preview) Solution <span class="bcp14">SHOULD</span> allow for extensibility and discoverable extensions (preview of share invitation).<a href="#section-5-1.16" class="pilcrow">¶</a>
-</li>
-        <li class="normal" id="section-5-1.17">(Req-RedemptionHandling) Shared Provisioning Information <span class="bcp14">SHOULD</span> route Receiver to redeem Provisioning Information using the designated Credential Management Application (e.g. Wallet).<a href="#section-5-1.17" class="pilcrow">¶</a>
+        <li class="normal" id="section-5-1.16">(Req-RedemptionHandling) Shared Provisioning Information <span class="bcp14">SHOULD</span> route Receiver to redeem Provisioning Information using the designated Credential Management Application (e.g. Wallet).<a href="#section-5-1.16" class="pilcrow">¶</a>
 </li>
       </ul>
 </section>

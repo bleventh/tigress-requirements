@@ -188,13 +188,8 @@ Table of Contents
       online at different times.  Sender and Receiver SHALL never need
       to be online at the same time.
 
-   *  (Req-UrlLink) Solution SHALL allow to share credentials as a
-      UrlLink to provisioning information stored on intermediary server.
-      The link SHALL easily be shared between Sender and Receiver device
-      over various communication channels.
-
-   *  (Req-init) Solution SHOULD allow Sender to send the UrlLink (Req-
-      UrlLink) to Receiver over any messaging channel, with various
+   *  (Req-init) Solution SHOULD allow Sender to send the share
+      invitation to Receiver over any messaging channel, with various
       degrees of security.
 
    *  (Req-P2P) A goal of credential transfer covered in this document
