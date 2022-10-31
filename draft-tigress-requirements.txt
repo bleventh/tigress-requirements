@@ -229,9 +229,6 @@ Table of Contents
    *  (Req-UnderstoodFormat) Both Sender application and Receiver
       application MUST be able to recognize the format.
 
-   *  (Req-Simplicity) Where possible, the system SHOULD rely on simple
-      building blocks to facilitate adoption and implementation.
-
    *  (Req-IntermediaryAttestation) If any Intermediary is required - it
       SHALL implement mechanisms to prevent abuse by share initiating
       device, verifying that the device is in good standing and content
