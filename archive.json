@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-30T02:38:16.695040+00:00",
+  "timestamp": "2022-11-01T02:42:06.337748+00:00",
   "repo": "dimmyvi/tigress-requirements",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDOH6qLrM5UBc7K",
       "title": "Why should the user not be able to see the data if they want to?",
       "url": "https://github.com/dimmyvi/tigress-requirements/issues/7",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bslassey",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "> This data SHOULD never be visible to said user in whichever messaging application the sender chose to initiate the transfer on. This eliminates the possibility of merely sending the requisite data inline, through an SMS or email for example, rather than leveraging an Intermediary server.\r\n\r\nWhy should the user not be able to see the data if they want to?",
       "createdAt": "2022-10-14T17:48:24Z",
-      "updatedAt": "2022-10-26T17:11:42Z",
-      "closedAt": null,
+      "updatedAt": "2022-10-31T20:55:40Z",
+      "closedAt": "2022-10-31T20:55:40Z",
       "comments": [
         {
           "author": "dimmyvi",
@@ -78,6 +78,13 @@
           "body": "ack",
           "createdAt": "2022-10-26T17:11:42Z",
           "updatedAt": "2022-10-26T17:11:42Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "Per  #11 we agreed to dismiss the requirement of separation of provisioning information and URL link",
+          "createdAt": "2022-10-31T20:55:36Z",
+          "updatedAt": "2022-10-31T20:55:36Z"
         }
       ]
     },
@@ -124,7 +131,7 @@
       "labels": [],
       "body": "> (Req-Security) Solution SHOULD provide security of the provisioning data transferred (MITM, brute-force attacks on the content, DDOS attacks etc).\r\n\r\nIt is unclear to me what this requirement is trying to say. What are the threats we're trying to protect against?",
       "createdAt": "2022-10-14T17:53:15Z",
-      "updatedAt": "2022-10-17T20:46:01Z",
+      "updatedAt": "2022-10-31T20:53:29Z",
       "closedAt": null,
       "comments": [
         {
@@ -140,6 +147,20 @@
           "body": "This may came a bit vague, if you could suggest a better wording, it would be very much appreciated!",
           "createdAt": "2022-10-17T20:46:01Z",
           "updatedAt": "2022-10-17T20:46:01Z"
+        },
+        {
+          "author": "bslassey",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@dimmyvi do you have a threat model document that we can work off of here?",
+          "createdAt": "2022-10-31T17:41:55Z",
+          "updatedAt": "2022-10-31T17:41:55Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "Yes, we have a review tomorrow with security team and will publish it - probably in a day. Will add a link to it here. Do you feel it needs to be a separate document or shall it be appended to the requirement draft?",
+          "createdAt": "2022-10-31T20:52:36Z",
+          "updatedAt": "2022-10-31T20:53:29Z"
         }
       ]
     },
@@ -148,15 +169,15 @@
       "id": "I_kwDOH6qLrM5Uc3Ip",
       "title": "Suggestion: focus on sharing via link rather than via a messaging app",
       "url": "https://github.com/dimmyvi/tigress-requirements/issues/11",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bslassey",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "When discussing with @nicksha we made the observation that the _real_ goal that folks have in mind is the ability to share credentials with link (which can then be sent via a messaging application). By framing this as specifying the ability to send a key via a messaging application, we invite a lot of questions around why we're using a helper server and a link rather than the messaging services ability to transmit arbitrary blobs of data. ",
       "createdAt": "2022-10-20T15:38:15Z",
-      "updatedAt": "2022-10-27T21:22:33Z",
-      "closedAt": null,
+      "updatedAt": "2022-10-31T20:47:09Z",
+      "closedAt": "2022-10-31T20:47:09Z",
       "comments": [
         {
           "author": "dimmyvi",
@@ -255,6 +276,61 @@
           "body": "> I would very much encourage you not to try to write the requirements such that they preclude all other solutions other than a URL-based solution. If your end goal is to have a URL-based solution, then just go ahead and say that and let's have that debate. And that was why I originally filed this issue, to tease out if the authors were trying to preclude all non-URL based solution in these requirements.\r\n\r\nI think it is important that the authors, me included, are open to other solutions and changes to the draft we originally submitted. I feel like that is the whole point of the working group. We believe that a url invite is the best option, but if there is something else better that we haven't considered that would be worth considering. I worry that if we start defining requirements like \"url invite\" we will accidentally preclude good ideas that we hadn't thought of.\r\n\r\n> My prefered approach would be to narrow the requirements down to just the requirements and leave the solution space as open as possible.\r\n\r\nI think we are saying the same thing, but we've done this in a confusing way with some of our requirements.\r\n\r\nI think we should delete the smooth UX requirement and rely on this existing requirement:\r\n> (Req-RedemptionHandling) Shared Provisioning Information SHOULD route Receiver to redeem Provisioning Information using the designated Credential Management Application (e.g. Wallet).\r\n\r\nWhat we really want is an invitation type that is routable to a specific application or service (i.e. when a user taps a link in a chat app another app or website is opened). Which we can do with a url or a new mime type.",
           "createdAt": "2022-10-27T21:22:33Z",
           "updatedAt": "2022-10-27T21:22:33Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "Ok, agree on removing requirement about URL-link",
+          "createdAt": "2022-10-31T20:47:09Z",
+          "updatedAt": "2022-10-31T20:47:09Z"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "id": "I_kwDOH6qLrM5VQAfL",
+      "title": "what is the relationship between previews and extensions ",
+      "url": "https://github.com/dimmyvi/tigress-requirements/issues/16",
+      "state": "OPEN",
+      "author": "bslassey",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "> (Req-Preview) Solution SHOULD allow for extensibility and discoverable extensions (preview of share invitation).\r\n\r\nWhat do extensions have to do with a preview?",
+      "createdAt": "2022-10-31T18:02:46Z",
+      "updatedAt": "2022-10-31T20:51:02Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": " It's the ability to preview the credential sent via a URL-link (e.g. Opengraph format or similar) and ability to \"forward\" the link to a wallet app (e.g. deep-links mechanism)",
+          "createdAt": "2022-10-31T20:51:02Z",
+          "updatedAt": "2022-10-31T20:51:02Z"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "id": "I_kwDOH6qLrM5VQ5fy",
+      "title": "Some requirements describe application best practices",
+      "url": "https://github.com/dimmyvi/tigress-requirements/issues/17",
+      "state": "OPEN",
+      "author": "bslassey",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "A few of the requirements specify application behavior or best practices that don't have any bearing on a protocol. Such as:\r\n\r\n> (Req-IntermediaryAttestation) An Intermediary SHALL implement mechanisms to prevent abuse by share initiating device, verifying that the device is in good standing and content generated by the sender device can be trusted by the Intermediary. The trust mechanism could be proprietary or publicly verifiable ( e.g. WebAuthN).\r\n> (Req-ReceiverTrust) The Receiver device SHOULD be able to evaluate the trustworthiness of the Intermediary using a list of trusted/approved intermediaries.\r\n> (Req-RedemptionHandling) Shared Provisioning Information SHOULD route Receiver to redeem Provisioning Information using the designated Credential Management Application (e.g. Wallet).\r\n> ",
+      "createdAt": "2022-10-31T21:01:56Z",
+      "updatedAt": "2022-10-31T23:02:38Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "We are trying to declare here trust relationship between Sender (share initiating device) and Relay (intermediary) server. \r\nIt does not affect the protocol per se,  but it affects the logical flow - who can start the flow, and what device can relay trust to create a mailbox. I believe this is important to this solution and we received multiple questions in IETF 114 to explain this.",
+          "createdAt": "2022-10-31T23:02:38Z",
+          "updatedAt": "2022-10-31T23:02:38Z"
         }
       ]
     }
@@ -985,24 +1061,26 @@
       "id": "PR_kwDOH6qLrM5Bw6Ga",
       "title": "Remove Req-AnyPlatform",
       "url": "https://github.com/dimmyvi/tigress-requirements/pull/12",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bslassey",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Being cross-platform is taken for a given for an IETF protocol\r\n",
       "createdAt": "2022-10-28T16:57:34Z",
-      "updatedAt": "2022-10-28T18:42:43Z",
+      "updatedAt": "2022-10-31T17:42:19Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
       "baseRefOid": "28dd8bf02dc0969e4dc8e732e8ed8f17960d0028",
       "headRepository": "bslassey/tigress-requirements",
       "headRefName": "main",
       "headRefOid": "6234669d4526ef78b58b8c8802ea9054f9974b08",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2022-10-31T17:42:18Z",
+      "mergedAt": "2022-10-31T17:42:18Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "ae266d037d086ecd2f25c59ffa68ee97147a8e29"
+      },
       "comments": [],
       "reviews": [
         {
@@ -1051,24 +1129,26 @@
       "id": "PR_kwDOH6qLrM5Bw6ps",
       "title": "Remove UX requirements",
       "url": "https://github.com/dimmyvi/tigress-requirements/pull/13",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bslassey",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "We shouldn't be specifying UX in an protocol doc",
       "createdAt": "2022-10-28T17:00:20Z",
-      "updatedAt": "2022-10-28T21:59:10Z",
+      "updatedAt": "2022-10-31T17:53:47Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
-      "baseRefOid": "28dd8bf02dc0969e4dc8e732e8ed8f17960d0028",
+      "baseRefOid": "ae266d037d086ecd2f25c59ffa68ee97147a8e29",
       "headRepository": "dimmyvi/tigress-requirements",
       "headRefName": "bslassey-remove-ux",
-      "headRefOid": "bf1b47a541238b12d959d0e46fe327897eb8f548",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "f373e89ea04f6c24b43cfe141b612e9ac794695e",
+      "closedAt": "2022-10-31T17:53:47Z",
+      "mergedAt": "2022-10-31T17:53:46Z",
+      "mergedBy": "bslassey",
+      "mergeCommit": {
+        "oid": "f5bccda736674dd489a62a74910457aa2a93dde6"
+      },
       "comments": [],
       "reviews": [
         {
@@ -1156,6 +1236,142 @@
               "updatedAt": "2022-10-28T21:59:10Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FR1gl",
+          "commit": {
+            "abbreviatedOid": "f373e89"
+          },
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-31T17:53:32Z",
+          "updatedAt": "2022-10-31T17:53:32Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "PR_kwDOH6qLrM5B58wO",
+      "title": "Allow non-uri solutions",
+      "url": "https://github.com/dimmyvi/tigress-requirements/pull/14",
+      "state": "MERGED",
+      "author": "bslassey",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I believe we ended up not wanting to scope the solution space to only URIs",
+      "createdAt": "2022-10-31T17:57:59Z",
+      "updatedAt": "2022-10-31T20:47:54Z",
+      "baseRepository": "dimmyvi/tigress-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "f5bccda736674dd489a62a74910457aa2a93dde6",
+      "headRepository": "dimmyvi/tigress-requirements",
+      "headRefName": "bslassey-not-just-uris",
+      "headRefOid": "ce2ebe4297804c97df7664562be61133a1023e00",
+      "closedAt": "2022-10-31T20:47:48Z",
+      "mergedAt": "2022-10-31T20:47:48Z",
+      "mergedBy": "dimmyvi",
+      "mergeCommit": {
+        "oid": "dcce777c7412d9d1b4d9d53c30c5d0e182cc0c53"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOH6qLrM5FR34G",
+          "commit": {
+            "abbreviatedOid": "ce2ebe4"
+          },
+          "author": "nicksha",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-31T18:00:23Z",
+          "updatedAt": "2022-10-31T18:00:23Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FSvHf",
+          "commit": {
+            "abbreviatedOid": "ce2ebe4"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-31T20:47:43Z",
+          "updatedAt": "2022-10-31T20:47:43Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "id": "PR_kwDOH6qLrM5B59Tc",
+      "title": "simplicity isn't a requirement",
+      "url": "https://github.com/dimmyvi/tigress-requirements/pull/15",
+      "state": "MERGED",
+      "author": "bslassey",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-10-31T18:00:11Z",
+      "updatedAt": "2022-10-31T20:44:45Z",
+      "baseRepository": "dimmyvi/tigress-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "f5bccda736674dd489a62a74910457aa2a93dde6",
+      "headRepository": "dimmyvi/tigress-requirements",
+      "headRefName": "bslassey-not-simple",
+      "headRefOid": "b7afac3fd59c83b22a9b8014ae971e4e2c5bc0a7",
+      "closedAt": "2022-10-31T20:44:38Z",
+      "mergedAt": "2022-10-31T20:44:38Z",
+      "mergedBy": "dimmyvi",
+      "mergeCommit": {
+        "oid": "4ba19e5b946c170f72522694ecceb00097ba3e14"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOH6qLrM5FR4f5",
+          "commit": {
+            "abbreviatedOid": "b7afac3"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-31T18:02:06Z",
+          "updatedAt": "2022-10-31T18:02:06Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FSVmp",
+          "commit": {
+            "abbreviatedOid": "b7afac3"
+          },
+          "author": "alexpell00",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-31T19:33:01Z",
+          "updatedAt": "2022-10-31T19:33:01Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FSuOQ",
+          "commit": {
+            "abbreviatedOid": "b7afac3"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-31T20:44:28Z",
+          "updatedAt": "2022-10-31T20:44:28Z",
+          "comments": []
         }
       ]
     }
