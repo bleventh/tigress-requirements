@@ -74,18 +74,19 @@ Table of Contents
    1.  Introduction
    2.  Conventions and Definitions
    3.  Use Cases
-   4.  Assumptions
-   5.  Requirements
-     5.1.  Intermediary server requirments
-   6.  Review of existing solutions
-     6.1.  Arbitrary Messaging Channel (Email / WhatsApp / SMS /
+   4.  Relationships
+   5.  Assumptions
+   6.  Requirements
+     6.1.  Intermediary server requirments
+   7.  Review of existing solutions
+     7.1.  Arbitrary Messaging Channel (Email / WhatsApp / SMS /
            Signal / etc.)
-     6.2.  GSS-API, Kerberos
-     6.3.  Signal Protocol
-   7.  Out of Scope
-   8.  Security Considerations
-   9.  IANA Considerations
-   10. Normative References
+     7.2.  GSS-API, Kerberos
+     7.3.  Signal Protocol
+   8.  Out of Scope
+   9.  Security Considerations
+   10. IANA Considerations
+   11. Normative References
    Acknowledgments
    Authors' Addresses
 
@@ -156,7 +157,15 @@ Table of Contents
       key to her device, making a call to Provisioning Partner to
       receive new credential information.
 
-4.  Assumptions
+4.  Relationships
+
+   mermaid sequenceDiagram actor S as Sender participant I as
+   Intermediary actor R as Receiver S ->> I : upload credential data
+   break Generic messaging channel S ->> R : send invite end Loop
+   Provision credential R ->> I : request credential data I ->> R :
+   deliver credential data end
+
+5.  Assumptions
 
    *  Original credential information (with cryptographic key material)
       MUST NOT be sent or shared.  Instead, sender SHALL be transferring
@@ -186,7 +195,7 @@ Table of Contents
    *  Provisioning a credential on the Receiver MAY require multiple
       round trips.
 
-5.  Requirements
+6.  Requirements
 
    *  (Req-Connectivity) Sender and Receiver SHALL be allowed to be
       online at different times.  Sender and Receiver SHALL never need
@@ -226,7 +235,7 @@ Table of Contents
       route Receiver to redeem Provisioning Information using the
       designated Credential Management Application (e.g.  Wallet).
 
-5.1.  Intermediary server requirments
+6.1.  Intermediary server requirments
 
    If the solution requires an intermediary server, it should have the
    following requirements.
@@ -255,7 +264,7 @@ Table of Contents
       the trustworthiness of the Intermediary using a list of trusted/
       approved intermediaries.
 
-6.  Review of existing solutions
+7.  Review of existing solutions
 
    A number of existing solutions / protocols have been reviewed in
    order to be used for secure credential transfer based on the
@@ -268,7 +277,7 @@ Table of Contents
    standardized mechanism of exchanging access-specific encrypted
    credential information.
 
-6.1.  Arbitrary Messaging Channel (Email / WhatsApp / SMS / Signal /
+7.1.  Arbitrary Messaging Channel (Email / WhatsApp / SMS / Signal /
       etc.)
 
    The Provisioning Information MAY be sent from Sender to Receiver over
@@ -281,7 +290,7 @@ Table of Contents
    technical and greatly limit adoption.  This violates (Req-
    NontechnicalUX).
 
-6.2.  GSS-API, Kerberos
+7.2.  GSS-API, Kerberos
 
    GSS-API [RFC2078] and Kerberos [RFC4120] are authentication
    technologies which could be used to authenticate Sender, Receiver and
@@ -293,7 +302,7 @@ Table of Contents
    Intermediary server but it would force all participants to use a
    specific cloud service which is in violation of (Req-AnyPlatorm).
 
-6.3.  Signal Protocol
+7.3.  Signal Protocol
 
    As a messaging protocol, Signal could be used between Sender,
    Receiver and Intermediary but this protocol is fairly complex and its
@@ -301,7 +310,7 @@ Table of Contents
    however support the Signal service for share initiation, in line with
    (Req-init).
 
-7.  Out of Scope
+8.  Out of Scope
 
    *  Identification and Authorization - solution shall not require
       strong identification and authentication from user (e.g. using PKI
@@ -315,15 +324,15 @@ Table of Contents
    *  Detailing how credentials are provisioned either on a device or
       with a provisioning partner.
 
-8.  Security Considerations
+9.  Security Considerations
 
    TODO Security
 
-9.  IANA Considerations
+10.  IANA Considerations
 
    This document has no IANA actions.
 
-10.  Normative References
+11.  Normative References
 
    [CCC-Digital-Key-30]
               Car Connectivity Consortium, "Digital Key – The Future of
