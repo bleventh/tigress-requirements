@@ -183,6 +183,9 @@ Table of Contents
       provisioning information themselves or host their own
       intermediary.
 
+   *  Provisioning a credential on the Receiver MAY require multiple
+      round trips.
+
 5.  Requirements
 
    *  (Req-Connectivity) Sender and Receiver SHALL be allowed to be
