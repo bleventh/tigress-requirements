@@ -226,7 +226,7 @@ Table of Contents
 5.1.  Intermediary server requirments
 
    If the solution requires an intermediary server, it should have the
-   folling requirements.
+   following requirements.
 
    *  (Req-Privacy) An Intermediary server SHALL not be able to
       correlate users between exchanges, or create a social graph.
