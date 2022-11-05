@@ -5,7 +5,7 @@
 TIGRESS                                                     D. Vinokurov
 Internet-Draft                                                  C. Astiz
 Intended status: Informational                              A. Pelletier
-Expires: 8 May 2023                                         J. L. Giraud
+Expires: 9 May 2023                                         J. L. Giraud
                                                              A. Bulgakov
                                                              M. Byington
                                                                Apple Inc
@@ -13,7 +13,7 @@ Expires: 8 May 2023                                         J. L. Giraud
                                                             Alphabet Inc
                                                               M. Gerster
                                                         Mercedes-Benz AG
-                                                         4 November 2022
+                                                         5 November 2022
 
 
           Transfer Digital Credentials Securely - Requirements
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 May 2023.
+   This Internet-Draft will expire on 9 May 2023.
 
 Copyright Notice
 
@@ -281,14 +281,9 @@ Table of Contents
       etc.)
 
    The Provisioning Information MAY be sent from Sender to Receiver over
-   an arbitrary messaging channel, but that would not provide a good
-   user experience.  Users MAY need to copy and paste the Provisioning
-   Information, or need a special application to handle some new file
-   type.  This violates (Req-SmoothUX).  If multiple round trips were
-   required the user would need to manually managing multiple payloads
-   of Provisioning Information.  This would be very hard for anyone non
-   technical and greatly limit adoption.  This violates (Req-
-   NontechnicalUX).
+   an arbitrary messaging channel that supports binary file transfer,
+   but this would not support provisioning flows which require multiple
+   round trips as requied by (Req-RoundTrips).
 
 7.2.  GSS-API, Kerberos
 
