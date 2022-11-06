@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-11-03T02:12:10.294304+00:00",
+  "timestamp": "2022-11-06T02:18:30.140761+00:00",
   "repo": "dimmyvi/tigress-requirements",
   "labels": [
     {
@@ -131,7 +131,7 @@
       "labels": [],
       "body": "> (Req-Security) Solution SHOULD provide security of the provisioning data transferred (MITM, brute-force attacks on the content, DDOS attacks etc).\r\n\r\nIt is unclear to me what this requirement is trying to say. What are the threats we're trying to protect against?",
       "createdAt": "2022-10-14T17:53:15Z",
-      "updatedAt": "2022-11-02T16:11:38Z",
+      "updatedAt": "2022-11-04T20:54:11Z",
       "closedAt": null,
       "comments": [
         {
@@ -175,6 +175,13 @@
           "body": "We added a threat model draft, still adding content to it: https://github.com/dimmyvi/tigress-sample-implementation/blob/main/draft-tigress-sample-implementation.md",
           "createdAt": "2022-11-02T16:11:14Z",
           "updatedAt": "2022-11-02T16:11:38Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "Hi Brad, I finished updating the threat model document, planning to publish it tomorrow (5 November) on Datatracker.\r\nIf you could review and provide feedback, I'd very much appreciate it",
+          "createdAt": "2022-11-04T20:54:11Z",
+          "updatedAt": "2022-11-04T20:54:11Z"
         }
       ]
     },
@@ -465,7 +472,7 @@
       "labels": [],
       "body": "https://github.com/dimmyvi/tigress-requirements/blob/main/draft-tigress-requirements.md#signal-protocol",
       "createdAt": "2022-11-02T15:26:13Z",
-      "updatedAt": "2022-11-02T17:54:22Z",
+      "updatedAt": "2022-11-04T20:40:21Z",
       "closedAt": null,
       "comments": [
         {
@@ -474,6 +481,13 @@
           "body": "I think in this section we were trying to specify the Signal protocol specifically rather than the Signal App. The Signal App is the same as WhatsApp I believe but using the protocol outside the app is what we were trying to address.",
           "createdAt": "2022-11-02T17:54:21Z",
           "updatedAt": "2022-11-02T17:54:21Z"
+        },
+        {
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "body": "We are just answering questions asked in IETF 114 by Eric Rescorla - he specifically mentioned signal. \r\nYou're right, it does not really matter what protocol can be used as an alternative, it still doesn't satisfy the requirements the way we put it - separation of channels.",
+          "createdAt": "2022-11-04T20:38:58Z",
+          "updatedAt": "2022-11-04T20:40:21Z"
         }
       ]
     }
@@ -1523,24 +1537,26 @@
       "id": "PR_kwDOH6qLrM5CEGqq",
       "title": "Actors diagram ",
       "url": "https://github.com/dimmyvi/tigress-requirements/pull/18",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bslassey",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Created a diagram to illustrate the relationships between actors",
       "createdAt": "2022-11-02T14:45:17Z",
-      "updatedAt": "2022-11-02T22:05:35Z",
+      "updatedAt": "2022-11-04T20:34:46Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
       "baseRefOid": "6b2b1f1b32b6768ab7d56164ff2850f517221dd0",
       "headRepository": "bslassey/tigress-requirements",
       "headRefName": "bslassey-actors-diagra,",
       "headRefOid": "4aca1ea7e286638133368507117a7cef313d3fa7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2022-11-04T20:34:46Z",
+      "mergedAt": "2022-11-04T20:34:46Z",
+      "mergedBy": "dimmyvi",
+      "mergeCommit": {
+        "oid": "c7301acfa2e6943210cd43cdb64c74279f50e8cd"
+      },
       "comments": [],
       "reviews": [
         {
@@ -1622,6 +1638,26 @@
               "updatedAt": "2022-11-02T22:05:35Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FsAZ-",
+          "commit": {
+            "abbreviatedOid": "76f0d86"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-11-04T20:34:38Z",
+          "updatedAt": "2022-11-04T20:34:38Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "Merging",
+              "createdAt": "2022-11-04T20:34:38Z",
+              "updatedAt": "2022-11-04T20:34:38Z"
+            }
+          ]
         }
       ]
     },
@@ -1630,24 +1666,26 @@
       "id": "PR_kwDOH6qLrM5CEOLz",
       "title": "Add an assumption around multiple round trips",
       "url": "https://github.com/dimmyvi/tigress-requirements/pull/21",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bslassey",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "I see this assumption made in the document, but not documented. Separately we should confirm that this is something that is needed.",
       "createdAt": "2022-11-02T15:06:43Z",
-      "updatedAt": "2022-11-02T17:23:27Z",
+      "updatedAt": "2022-11-04T20:33:48Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
       "baseRefOid": "6b2b1f1b32b6768ab7d56164ff2850f517221dd0",
       "headRepository": "dimmyvi/tigress-requirements",
       "headRefName": "bslassey-round-trip-assumption",
       "headRefOid": "a4fbf209be4213c4a84f124c1e82ba533721995b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2022-11-04T20:33:47Z",
+      "mergedAt": "2022-11-04T20:33:47Z",
+      "mergedBy": "dimmyvi",
+      "mergeCommit": {
+        "oid": "2b997bc700da460edfeb60a220e6a11c61b26864"
+      },
       "comments": [],
       "reviews": [
         {
@@ -1662,6 +1700,19 @@
           "createdAt": "2022-11-02T17:23:27Z",
           "updatedAt": "2022-11-02T17:23:27Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FsAMz",
+          "commit": {
+            "abbreviatedOid": "a4fbf20"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-11-04T20:33:42Z",
+          "updatedAt": "2022-11-04T20:33:42Z",
+          "comments": []
         }
       ]
     },
@@ -1670,24 +1721,26 @@
       "id": "PR_kwDOH6qLrM5CEPdQ",
       "title": "Rewrite arbitrary message channel",
       "url": "https://github.com/dimmyvi/tigress-requirements/pull/22",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bslassey",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Focus on multiple round trips closes issue #20 ",
       "createdAt": "2022-11-02T15:09:55Z",
-      "updatedAt": "2022-11-02T22:04:48Z",
+      "updatedAt": "2022-11-05T16:10:21Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
       "baseRefOid": "6b2b1f1b32b6768ab7d56164ff2850f517221dd0",
       "headRepository": "dimmyvi/tigress-requirements",
       "headRefName": "bslassey-message-channel-round-trips",
       "headRefOid": "5fe993691526bc229386ea3678c8c15842b96a64",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2022-11-05T16:10:11Z",
+      "mergedAt": "2022-11-05T16:10:11Z",
+      "mergedBy": "dimmyvi",
+      "mergeCommit": {
+        "oid": "d7a04b2a1554480c8c7fa99e600c259dc6f9d876"
+      },
       "comments": [],
       "reviews": [
         {
@@ -1747,6 +1800,86 @@
               "body": "I like the \"this may not easily support\" wording to soften the statement. \r\n\r\nIf this came in a working group meeting would it be best to not mention the UX or practical application of the protocol? If so, it will be interesting to defend why we need this protocol.",
               "createdAt": "2022-11-02T22:04:48Z",
               "updatedAt": "2022-11-02T22:04:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FkJxG",
+          "commit": {
+            "abbreviatedOid": "5fe9936"
+          },
+          "author": "bslassey",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-11-03T15:11:22Z",
+          "updatedAt": "2022-11-03T15:11:22Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "I think we need to justify when the protocol needs to handle multiple round trip provisioning flows, since it adds complexity. But once we have that requirement justified, arguments for the protocol to support it well for pragmatic reasons are entirely valid.",
+              "createdAt": "2022-11-03T15:11:22Z",
+              "updatedAt": "2022-11-03T15:11:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5Fr_e0",
+          "commit": {
+            "abbreviatedOid": "5fe9936"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-11-04T20:30:28Z",
+          "updatedAt": "2022-11-04T20:30:29Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "Justification of multiple round trips lies in the format of encrypted provisioning information - simply put, Digital Car Key  (CCC spec) needs it, since Owner's signature is required over the Friend's device KeyImport request. \r\nBut this will bring us into getting into provisioning phase and close ties with CCC spec, which we tried to avoid in the first place....",
+              "createdAt": "2022-11-04T20:30:28Z",
+              "updatedAt": "2022-11-04T20:30:29Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FsAC1",
+          "commit": {
+            "abbreviatedOid": "5fe9936"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-11-04T20:33:00Z",
+          "updatedAt": "2022-11-04T20:33:01Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "We can possibly rephrase the sentence to  \"If multiple round trips were required by the credential vertical that provisioning information belongs to (e.g. Digital Car Key - defined by CCC specification) ...\"",
+              "createdAt": "2022-11-04T20:33:00Z",
+              "updatedAt": "2022-11-04T20:33:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH6qLrM5FsAVm",
+          "commit": {
+            "abbreviatedOid": "5fe9936"
+          },
+          "author": "dimmyvi",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-11-04T20:34:19Z",
+          "updatedAt": "2022-11-04T20:34:19Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "I believe, this is covered in #21",
+              "createdAt": "2022-11-04T20:34:19Z",
+              "updatedAt": "2022-11-04T20:34:19Z"
             }
           ]
         }
@@ -1890,21 +2023,21 @@
       "id": "PR_kwDOH6qLrM5CFCIU",
       "title": "Update and rename draft-tigress-requirements.md to draft-dvinokurov-t\u2026",
       "url": "https://github.com/dimmyvi/tigress-requirements/pull/26",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "dimmyvi",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "\u2026igress-requirements.md\r\n\r\nAddressing review feedback from Richard Barnes",
       "createdAt": "2022-11-02T17:49:05Z",
-      "updatedAt": "2022-11-02T22:07:39Z",
+      "updatedAt": "2022-11-04T20:25:13Z",
       "baseRepository": "dimmyvi/tigress-requirements",
       "baseRefName": "main",
       "baseRefOid": "6b2b1f1b32b6768ab7d56164ff2850f517221dd0",
       "headRepository": "dimmyvi/tigress-requirements",
       "headRefName": "dimmyvi-mailgroup-review",
       "headRefOid": "a264919ab6d3f89e49bcf2c848f2077a360337b4",
-      "closedAt": null,
+      "closedAt": "2022-11-04T20:25:13Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
